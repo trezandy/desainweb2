@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
     public function show($slug)
     {
-        $post = \DB::table('posts')->where('slug', $slug)->first();
+        $post = Post::where('slug', $slug)->first();
 
         $title = $post->title;
 

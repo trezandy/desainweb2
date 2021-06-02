@@ -17,6 +17,9 @@
                     <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="contact">Contact</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link {{ request()->is('mahasiswa') ? 'active' : '' }}" href="mahasiswa">Mahasiswa</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {{ request()->is('login') ? 'active' : '' }}" href="login">Login</a>
                 </li>
             </ul>

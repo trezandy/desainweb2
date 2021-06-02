@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Models\Student;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,3 +40,13 @@ Route::get('/login', function () {
 });
 
 Route::get('/post/{slug}', 'PostController@show');
+
+Route::get('/mahasiswa', function () {
+    $title = "Daftar Mahasiswa";
+    $students = Student::all();
+
+    return view(
+        'students',
+        compact('title', 'students')
+    );
+});
